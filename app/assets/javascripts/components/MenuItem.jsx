@@ -1,9 +1,9 @@
-function MenuItem({ text }) {
+function MenuItem({ data: { label, link } }) {
   return (
     <li className="nav-item">
-      <a className="nav-link" href="#">
+      <a className="nav-link" href={link ? link : '#'}>
         <span data-feather="file-text"></span>
-        {text}
+        {label}
       </a>
     </li>
   );

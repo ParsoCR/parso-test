@@ -7,12 +7,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTUhPCIxNnIYg0Uq4_qy80pkvXS_xAUc0" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTUhPCIxNnIYg0Uq4_qy80pkvXS_xAUc0"></script>
   </head>
 
   <body>
     <div class="main-container">
-      <%= react_component("Menu", { message: "Prueba Parso" }) %>
+      <%= react_component("Menu") %>
       <%= yield %>
     </div>
   </body>
