@@ -7,12 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTUhPCIxNnIYg0Uq4_qy80pkvXS_xAUc0" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTUhPCIxNnIYg0Uq4_qy80pkvXS_xAUc0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js" integrity="sha512-JxJpoAvmomz0MbIgw9mx+zZJLEvC6hIgQ6NcpFhVmbK1Uh5WynnRTTSGv3BTZMNBpPbocmdSJfldgV5lVnPtIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
-     <div class="container">
-	     <%= yield %>
+    <div class="main-container">
+      <%= react_component("Menu", prerender: false) %>
+      <div class="main-content">
+        <%= yield %>
       </div>
+    </div>
   </body>
 </html>
