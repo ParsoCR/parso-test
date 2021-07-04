@@ -9,7 +9,8 @@ class LocationMap extends React.Component {
   componentDidMount() {
     fetch(this.props.source).then(response => response.json()).then(json => {
       const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 8,
+        zoom: 4,
+        center: json.points[0],
       });
 
       json.points.forEach(position => {
